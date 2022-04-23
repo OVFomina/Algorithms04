@@ -26,7 +26,6 @@ public class AscendingSequenceTest {
         int[] actualResult = as.ascendingSequence(start, end, step);
 
         Assertions.assertArrayEquals(expectedResult, actualResult); //сравниваем результат с ожидаемым
-        Assert
     }
 
     @Order(2)
