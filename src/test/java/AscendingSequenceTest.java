@@ -13,8 +13,7 @@ public class AscendingSequenceTest {
     //@RepeatedTest(50) //аннотаци€, чтобы этот тест прогналс€ 50 раз
     @Test
     public void testAscendingSequenceHappyPathPositiveNumber() { //—начала пишем хэппи-тест Ц такой, что мы даем верные
-        // параметры
-        // и получаем ожидаемый результат
+        // параметры и получаем ожидаемый результат
         //triple A pattern
         //0, 1, 2, 3, 4, 5 //устанавливаем значени€
         int start = 0;
