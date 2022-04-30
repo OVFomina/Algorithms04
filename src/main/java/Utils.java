@@ -56,4 +56,60 @@ public class Utils {
         }
         return (sumOfValues / array.length);
     }
+
+    //возвращаем отсортированный от меньшего к большему массив
+    public static int[] returnSortedArray(int[] array) {
+        if (Utils.isArrayLengthNotZero(array)) {
+            boolean isSorted = false;
+            int buf;
+            while (!isSorted) {
+                isSorted = true;
+                for (int i = 0; i < (array.length - 1); i++) {
+                    if (array[i] > array[i + 1]) {
+                        isSorted = false;
+                        buf = array[i];
+                        array[i] = array[i + 1];
+                        array[i + 1] = buf;
+                    }
+                }
+            }
+
+            return array;
+        }
+
+        return (new int[] {});
+    }
+
+    //возвращаем отсортированный от меньшего к большему массив уникальных значений
+    public static int[] returnUniqueNumbersArray(int[] intArray) {
+        //создаем копию входного массива для работы с ним
+        int[] copyArray = new int[intArray.length];
+        for (int i = 0; i < intArray.length; i++) {
+            copyArray[i] = intArray[i];
+        }
+        //заменяем в массиве неуникальные числа на 0
+        for (int i = 0; i < copyArray.length; i++) {
+            for (int j = i + 1; j < copyArray.length; j++) {
+                if (copyArray[i] == copyArray[j]) {
+                    copyArray[j] = 0;
+                }
+            }
+        }
+        //сортируем массив по возрастанию
+        copyArray = Utils.returnSortedArray(copyArray);
+        //находим количество нулей в отсортированном массиве и записываем в итоговый массив только ненулевые позиции
+        int zeroCounter = 0;
+        for (int i = 0; i < copyArray.length; i++){
+            if (copyArray[i] == 0) {
+                zeroCounter++;
+            }
+        }
+        int[] resultArray = new int[copyArray.length - zeroCounter];
+        for (int i = 0; i < resultArray.length; i++) {
+            resultArray[i] = copyArray[zeroCounter];
+            zeroCounter++;
+        }
+
+        return resultArray;
+    }
 }
