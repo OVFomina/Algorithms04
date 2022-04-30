@@ -26,35 +26,48 @@ public class Utils {
 
     //возвращаем минимальное значение из всех элементов массива
     public static int returnMinValueOfArray(int[] array) {
-
-        int minValue = Integer.MAX_VALUE;
-        for (int i = 0; i < array.length; i++) {
-            if (minValue > array[i]) {
-                minValue = array[i];
+        if (Utils.isArrayLengthNotZero(array)) {
+            int minValue = Integer.MAX_VALUE;
+            for (int i = 0; i < array.length; i++) {
+                if (minValue > array[i]) {
+                    minValue = array[i];
+                }
             }
+
+            return minValue;
         }
-        return minValue;
+
+        return Integer.MIN_VALUE;
     }
 
     //возвращаем максимальное значение из всех элементов массива
     public static int returnMaxValueOfArray(int[] array) {
-
-        int maxValue = Integer.MIN_VALUE;
-        for (int i = 0; i < array.length; i++) {
-            if (maxValue < array[i]) {
-                maxValue = array[i];
+        if (Utils.isArrayLengthNotZero(array)) {
+            int maxValue = Integer.MIN_VALUE;
+            for (int i = 0; i < array.length; i++) {
+                if (maxValue < array[i]) {
+                    maxValue = array[i];
+                }
             }
+
+            return maxValue;
         }
-        return maxValue;
+
+        return Integer.MAX_VALUE;
     }
 
     //возвращаем среднее значение из всех элементов массива
     public static int returnAvValueOfArray(int[] array) {
-        int sumOfValues = 0;
+        if (Utils.isArrayLengthNotZero(array)) {
+            int sumOfValues = 0;
             for (int i = 0; i < array.length; i++) {
-            sumOfValues += array[i];
+                sumOfValues += array[i];
+            }
+
+            return (sumOfValues / array.length);
         }
-        return (sumOfValues / array.length);
+
+        return Integer.MIN_VALUE;
     }
 
     //возвращаем отсортированный от меньшего к большему массив
