@@ -22,7 +22,7 @@ public class Intersection {
             }
         }
 
-        return result;
+        return Utils.returnUniqueNumbersArray(result);
     }
 
     public static int[] intersection2(int[] array1, int[] array2){
