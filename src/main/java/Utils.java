@@ -125,4 +125,22 @@ public class Utils {
 
         return resultArray;
     }
+
+    //буква ли полученный char
+    public static boolean isCharLetter(char ch) {
+
+        return (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')));
+    }
+
+    //цифра ли полученный char
+    public static boolean isCharNumber(char ch) {
+
+        return ((ch >= '0') && (ch <= '9'));
+    }
+
+    //пробел ли полученный char
+    public static boolean isCharSpace(char ch) {
+
+        return (ch == ' ');
+    }
 }

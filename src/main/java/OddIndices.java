@@ -13,6 +13,6 @@ public class OddIndices {
             return oddIndices;
         }
 
-        return null;
+        return (new int[] {});
     }
 }

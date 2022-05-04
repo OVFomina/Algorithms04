@@ -4,11 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(Arrays.toString(
-                Intersection.intersection(new int[]{1, 2, 4, 5, 89}, new int[]{8, 9, 4, 2})
-        ));
-        System.out.println(Arrays.toString(
-                Intersection.intersection(new int[]{1, 2, 3, 4, 2, 5, 3}, new int[]{1, 3, 7, 8, 3, 5, 9, 3})
-        ));
+        System.out.println(StringToLetters.stringToLetters(" ,*0 i 2b"));
+        System.out.println(StringToLettersAndSpaces.stringToLettersAndSpaces(" ,*0 i 2b"));
+        System.out.println(StringToNumbersString.stringToNumbersString(" ,*0 i 2b"));
+        System.out.println(StringToNumbersAndSpaces.stringToNumbersAndSpaces(" ,*0 i 2b"));
     }
 }
