@@ -40,10 +40,10 @@ public class BiggerValueTest {
     }
 
     @Test
-    public void testBiggerValueHappyTestEqualNumbers() {
-        int a = 51;
-        int b = 51;
-        int expectedResult = 51;
+    public void testBiggerValueHappyTestMixNumbersReversed() {
+        int a = -184;
+        int b = 18;
+        int expectedResult = 18;
 
         BiggerValue bv = new BiggerValue();
         int actualResult = bv.biggerValue(a, b);
@@ -52,10 +52,10 @@ public class BiggerValueTest {
     }
 
     @Test
-    public void testBiggerValueHappyTestFirstNumberIsZero() {
+    public void testBiggerValueOneAndZero() {
         int a = 0;
-        int b = 145;
-        int expectedResult = 145;
+        int b = 1;
+        int expectedResult = 1;
 
         BiggerValue bv = new BiggerValue();
         int actualResult = bv.biggerValue(a, b);
@@ -64,10 +64,10 @@ public class BiggerValueTest {
     }
 
     @Test
-    public void testBiggerValueHappyTestSecondNumberIsZero() {
-        int a = 111;
+    public void testBiggerValueOneAndZeroReversed() {
+        int a = 1;
         int b = 0;
-        int expectedResult = 111;
+        int expectedResult = 1;
 
         BiggerValue bv = new BiggerValue();
         int actualResult = bv.biggerValue(a, b);
@@ -80,6 +80,54 @@ public class BiggerValueTest {
         int a = 0;
         int b = 0;
         int expectedResult = 0;
+
+        BiggerValue bv = new BiggerValue();
+        int actualResult = bv.biggerValue(a, b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void testBiggerValueMinusOneAndZero() {
+        int a = 0;
+        int b = -1;
+        int expectedResult = 0;
+
+        BiggerValue bv = new BiggerValue();
+        int actualResult = bv.biggerValue(a, b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void testBiggerValueMinusOneAndZeroReversed() {
+        int a = -1;
+        int b = 0;
+        int expectedResult = 0;
+
+        BiggerValue bv = new BiggerValue();
+        int actualResult = bv.biggerValue(a, b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void testBiggerValueHappyTestEqualPositiveNumbers() {
+        int a = 51;
+        int b = 51;
+        int expectedResult = 51;
+
+        BiggerValue bv = new BiggerValue();
+        int actualResult = bv.biggerValue(a, b);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void testBiggerValueHappyTestEqualNegativeNumbers() {
+        int a = 111;
+        int b = 0;
+        int expectedResult = 111;
 
         BiggerValue bv = new BiggerValue();
         int actualResult = bv.biggerValue(a, b);

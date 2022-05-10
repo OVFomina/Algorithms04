@@ -3,7 +3,8 @@ import java.util.Locale;
 public class StartsWithLetter {
 
     public static String startsWithLetter(String str, char sample) {
-        str = (str.replaceAll("\n"," ")).toLowerCase(Locale.ROOT);
+        sample = Character.toLowerCase(sample);
+        str = str.replaceAll("\n"," ");
         String resultString = "";
         String[] stringArray = str.split(" ");
         for (int i = 0; i < stringArray.length; i++) {
@@ -11,7 +12,7 @@ public class StartsWithLetter {
                     || (stringArray[i].charAt(stringArray[i].length() - 1) == '.')) {
                 stringArray[i] = stringArray[i].substring(0, stringArray[i].length() - 1);
             }
-            if (stringArray[i].charAt(0) == sample) {
+            if ((stringArray[i].charAt(0) == sample) || (Character.toLowerCase(stringArray[i].charAt(0)) == sample)) {
                 resultString += stringArray[i] + ", ";
             }
         }

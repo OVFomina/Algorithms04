@@ -26,7 +26,7 @@ public class OddIndicesTest {
     }
 
     @Test
-    public void testOddIndicesHappyPathOneElementArray() {
+    public void testOddIndicesOneElementArray() {
         int[] array = new int[] {12};
         int[] expectedResult = {};
 
@@ -37,7 +37,7 @@ public class OddIndicesTest {
     }
 
     @Test
-    public void testOddIndicesHappyPathZeroAsArrayElement() {
+    public void testOddIndicesZeroAsArrayElement() {
         int[] array = new int[] {0};
         int[] expectedResult = {};
 
